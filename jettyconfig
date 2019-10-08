@@ -1,0 +1,18 @@
+JAVA_HOME=/usr/lib/jvm/default-java
+JAVA_OPTIONS="$JAVA_OPTIONS -server -Dsolr.solr.home=/opt/apache/solr/cores"
+JAVA_OPTIONS="$JAVA_OPTIONS -Xms8g -Xmx12g -XX:NewRatio=3 -XX:SurvivorRatio=4
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:TargetSurvivorRatio=90 -XX:MaxTenuringThreshold=8 JAVA_OPTIONS="$JAVA_OPTIONS -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:ConcGCThreads=4
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:ParallelGCThreads=4 -XX:+CMSScavengeBeforeRemark
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:PretenureSizeThreshold=64m
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:+UseCMSInitiatingOccupancyOnly
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:CMSInitiatingOccupancyFraction=50
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:CMSMaxAbortablePrecleanTime=6000
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:+CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled
+JAVA_OPTIONS="$JAVA_OPTIONS -verbose:gc -XX:+PrintHeapAtGC -XX:+PrintGCDetails
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:+PrintTenuringDistribution
+JAVA_OPTIONS="$JAVA_OPTIONS -XX:+PrintGCApplicationStoppedTime
+JAVA_OPTIONS="$JAVA_OPTIONS -Xloggc:/var/log/solr/solr_gc.log
+JETTY_HOME=/opt/apache/solr  # start.jar should be here
+JETTY_USER=solr
+JETTY_LOGS=/var/log/solr

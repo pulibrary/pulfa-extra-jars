@@ -1,2 +1,5 @@
-# pulfa-extra-jars
-Extra jars required for eXist to support Princeton University Finding Aids
+# PULFA Extras
+Pre-built files and configurations for the PULFA application.
+
+These files are copied into place during installations.
+

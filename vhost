@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+  ServerName pulfa
+  ProxyPass / http://127.0.0.1:8080/exist/pulfa/
+  ProxyPassReverse / http://127.0.0.1:8080/exist/pulfa/
+
+  ErrorLog ${APACHE_LOG_DIR}/pulfa-error.log
+  LogLevel warn
+  CustomLog ${APACHE_LOG_DIR}/pulfa-access.log combined
+</VirtualHost>
